@@ -48,6 +48,19 @@ end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  # Assuming leading zeros are okay
+#  if s =~ /^[01]*00$/
+#    return true
+#  else
+#    return false
+#  end
+  
+  if s == "0"			# critical case: 0 is valid, but does not end in 00 always
+    return true
+  else
+    s =~ /^[01]*00$/	# regex for strings containing only 1 or 0 and ending in 00
+  end
+  #
 end
 
 # Part 3
